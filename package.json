@@ -1,0 +1,21 @@
+{
+  "name": "eslint-plugin-no-root-dir-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "files": ["lib", "index.js"],
+  "author": {
+    "email": "i@dbflower.me",
+    "name": "Flower Db",
+    "url": "https://github.com/dbflower"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "get-tsconfig": "^4.2.0"
+  }
+}
