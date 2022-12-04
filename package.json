@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {},
-  "files": ["lib", "index.js"],
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "author": {
     "email": "i@dbflower.me",
     "name": "Flower Db",
@@ -12,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:dbFlower/eslint-plugin-no-root-dir-import.git"
   },
   "license": "MIT",
   "dependencies": {
