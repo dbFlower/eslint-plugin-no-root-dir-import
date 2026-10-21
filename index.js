@@ -1,5 +1,6 @@
 const path = require('path');
 const getTsConfig = require('get-tsconfig');
+const { name, version } = require('./package.json');
 
 const DEFAULT_ROOT_DIR = 'src';
 
@@ -16,7 +17,7 @@ function create(context) {
       const start = node.source.value.split('/')[0];
 
       if (rootDirs.includes(start)) {
-        const filename = context.getFilename();
+        const filename = context.filename || context.getFilename();
         const tsConfig = getTsConfig.getTsconfig(filename);
 
         let expectedPath = '';
@@ -71,10 +72,23 @@ function create(context) {
 }
 
 module.exports = {
+  meta: { name, version },
   rules: {
     'no-root-dir-import': {
       meta: {
-        fixable: true, // if this isn't set, ESLint will throw an error if you report a fix
+        fixable: 'code',
+        schema: [{
+          type: 'object',
+          properties: {
+            rootDir: {
+              anyOf: [
+                { type: 'string' },
+                { type: 'array', items: { type: 'string' } },
+              ],
+            },
+          },
+          additionalProperties: false,
+        }],
       },
       create,
     },
