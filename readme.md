@@ -33,9 +33,7 @@ build pipeline.
 
 ### Flat config (ESLint 9 and 10)
 
-These compatibility updates are not yet published to npm. The existing npm
-version `1.0.0` predates them; use a local checkout to try the updated plugin
-until the next release.
+ESLint 9 and 10 compatibility requires plugin version `1.0.1` or newer.
 
 In `eslint.config.cjs`:
 

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-root-dir-import",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint rule to disallow root-directory imports in TypeScript projects, with autofix support.",
   "main": "index.js",
   "scripts": {
